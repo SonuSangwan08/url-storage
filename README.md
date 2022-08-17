@@ -1,2 +1,2 @@
-# url-storage
+# url-storage-app
 Application to manage URLs
