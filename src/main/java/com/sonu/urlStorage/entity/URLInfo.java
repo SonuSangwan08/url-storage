@@ -2,11 +2,13 @@ package com.sonu.urlStorage.entity;
 
 import lombok.Data;
 
-import java.math.BigDecimal;
+import java.util.concurrent.atomic.AtomicLong;
 
 @Data
 public class URLInfo {
+    private long id;
     private String uniqueShortKey;
-    private BigDecimal count;
+    private AtomicLong count;
+    private String url;
 
 }
