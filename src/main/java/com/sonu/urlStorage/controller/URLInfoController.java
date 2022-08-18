@@ -1,9 +1,7 @@
 package com.sonu.urlStorage.controller;
 
-import com.sonu.urlStorage.exception.URLInfoNotFoundException;
 import com.sonu.urlStorage.model.URLInfoRequest;
 import com.sonu.urlStorage.model.URLInfoResponse;
-import com.sonu.urlStorage.service.Impl.URLInfoServiceImpl;
 import com.sonu.urlStorage.service.URLInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +26,7 @@ public class URLInfoController {
     }
 
     @GetMapping
-    public ResponseEntity<URLInfoResponse> getUrlInfo(@RequestParam String url) throws InterruptedException {
+    public ResponseEntity<URLInfoResponse> getUrlInfo(@RequestParam String url) {
         URLInfoResponse urlInfoResponse = urlInfoService.fetchUrlInfo(url);
         return ResponseEntity.status(HttpStatus.OK).body(urlInfoResponse);
 

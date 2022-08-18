@@ -38,7 +38,7 @@ public class URLInfoServiceImpl implements URLInfoService {
     }
 
     @Override
-    public URLInfoResponse fetchUrlInfo(String url) throws InterruptedException {
+    public URLInfoResponse fetchUrlInfo(String url) {
         URLInfo urlInfo = urlInfoDao.find(url);
         if (urlInfo == null) {
             log.error("url info not fount");
@@ -46,7 +46,6 @@ public class URLInfoServiceImpl implements URLInfoService {
         }
         URLInfoResponse urlInfoResponse = new URLInfoResponse();
         urlInfoResponse.setShortKey(urlInfo.getUniqueShortKey());
-        Thread.sleep(5000);
         urlInfo.getCount().getAndIncrement();
         return urlInfoResponse;
     }

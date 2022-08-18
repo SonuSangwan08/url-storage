@@ -8,7 +8,7 @@ import java.util.List;
 public interface URLInfoService {
     URLInfoResponse saveUrl(URLInfoRequest urlInfoRequest);
 
-    URLInfoResponse fetchUrlInfo(String url) throws InterruptedException;
+    URLInfoResponse fetchUrlInfo(String url);
 
     URLInfoResponse fetchUrlInfoCount(String url);
 
