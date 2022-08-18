@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class UrlStorageApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UrlStorageApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UrlStorageApplication.class, args);
+    }
 
 }
