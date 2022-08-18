@@ -41,7 +41,7 @@ public class URLInfoServiceImpl implements URLInfoService {
     public URLInfoResponse fetchUrlInfo(String url) {
         URLInfo urlInfo = urlInfoDao.find(url);
         if (urlInfo == null) {
-            log.error("url info not fount");
+            log.error("url info not found");
             throw new URLInfoNotFoundException("url info not found " + url);
         }
         URLInfoResponse urlInfoResponse = new URLInfoResponse();
@@ -54,7 +54,7 @@ public class URLInfoServiceImpl implements URLInfoService {
     public URLInfoResponse fetchUrlInfoCount(String url) {
         URLInfo urlInfo = urlInfoDao.find(url);
         if (urlInfo == null) {
-            log.error("url info not fount");
+            log.error("url info not found");
             throw new URLInfoNotFoundException("url info not found " + url);
         }
         URLInfoResponse urlInfoResponse = new URLInfoResponse();
@@ -66,7 +66,7 @@ public class URLInfoServiceImpl implements URLInfoService {
     public List<URLInfoResponse> fetchUrlList(Integer page, Integer size) {
         List<URLInfo> list = urlInfoDao.findUrlList(page, size);
         if (list.isEmpty()) {
-            log.error("url info not fount");
+            log.error("url info not found");
             throw new URLInfoNotFoundException("url info not found ");
         }
         List<URLInfoResponse> urlInfoResponseList = new ArrayList<>();

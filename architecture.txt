@@ -1,0 +1,8 @@
+Application Layers:-
+1. Controller
+2. Service
+3. DAO
+4. Internal Pseudo database(used Concurrent Hashmap and Arraylist)
+
+
+Consumer          <======>  Spring boot App(4 endpoints to manipulate URL info)   <=====>   Internal pseudo database(Concurrent Hashmap and an ArrayList)
